@@ -1,0 +1,41 @@
+{
+  "tool": "PSNR",
+  "tool_version": {
+    "opencv": "4.8.0",
+    "python": "3.11.0"
+  },
+  "config": {
+    "use_luma": true,
+    "R": 255.0
+  },
+  "images": {
+    "original": {
+      "file_name": "psnr_ref.png",
+      "path": "psnr_ref.png",
+      "shape": [
+        172,
+        172
+      ],
+      "dtype": "uint8"
+    },
+    "processed": {
+      "file_name": "psnr_test.jpg",
+      "path": "psnr_test.jpg",
+      "shape": [
+        172,
+        172
+      ],
+      "dtype": "uint8"
+    }
+  },
+  "quality_score": 16.718019591402616,
+  "score_interpretation": "Higher is better. Infinity for identical images given the same dynamic range.",
+  "aux": {
+    "mse": 1384.4535897782584
+  },
+  "parameters_hash": {
+    "img1": "psnr_ref.png",
+    "img2": "psnr_test.jpg",
+    "luma": true
+  }
+}

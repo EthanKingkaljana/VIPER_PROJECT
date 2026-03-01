@@ -1,0 +1,33 @@
+{
+  "tool": "HomographyAlignment",
+  "warp_mode": "image2_to_image1",
+  "blend": true,
+  "num_inliers": 28,
+  "homography_matrix": [
+    [
+      0.5067278843990984,
+      0.006867737874858827,
+      329.56085595670845
+    ],
+    [
+      0.0019618579637048356,
+      0.5050912109307438,
+      93.57713027182703
+    ],
+    [
+      1.1571788416134589e-05,
+      1.6202067821450216e-05,
+      1.0
+    ]
+  ],
+  "output": {
+    "aligned_image": "homo_sift.jpg",
+    "aligned_url": "homo_sift.jpg",
+    "result_image_url": "homo_sift.jpg"
+  },
+  "parameters_hash": {
+    "match_json": "flann_sift.json",
+    "warp": "image2_to_image1",
+    "blend": true
+  }
+}

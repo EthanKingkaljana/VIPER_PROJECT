@@ -1,0 +1,32 @@
+{
+  "tool": "OtsuThreshold",
+  "output_type": "classification",
+  "tool_version": "4.8.0",
+  "input_image": {
+    "path": "noise.jpg",
+    "shape": [ 570, 600 ],
+    "dtype": "uint8"
+  },
+  "parameters": {
+    "img": "noise.jpg",
+    "blur": true,
+    "k": 5,
+    "inv": false,
+    "open": false,
+    "close": false,
+    "mk": 3,
+    "hist": false
+  },
+  "threshold_value": 49,
+  "output": {
+    "binary_mask_path": "otsu_binary.png",
+    "binary_mask_shape": [ 570, 600 ],
+    "histogram_path": null,
+    
+    "binary_url": "otsu_binary.png",
+    "histogram_url": null,
+    "result_image_url": "otsu_binary.png"
+  },
+  "binary_url": "otsu_binary.png",
+  "notes": "Binary image is 0/255 (uint8)."
+}
