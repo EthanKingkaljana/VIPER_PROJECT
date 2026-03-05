@@ -9,7 +9,7 @@ import WorkflowControls from './components/WorkflowControls';
 import WorkflowTabs from './components/WorkflowTabs';
 
 import type { WorkflowTemplate } from './lib/workflowTemplates';
-import type { WorkflowTab, NodeStatus } from './types'; 
+import type { WorkflowTab, NodeStatus } from './types';
 
 const STORAGE_KEY_APP_TABS = 'n2n_app_tabs';
 const STORAGE_KEY_ACTIVE_TAB = 'n2n_active_tab_id';

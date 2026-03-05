@@ -11,10 +11,16 @@ from server.algos.feature.sift_adapter import run as sift_run
 from server.algos.feature.orb_adapter import run as orb_run
 from server.algos.matching.bfmatcher_adapter import run as bf_run
 
-try:
-    SURF_AVAILABLE = hasattr(cv2, "xfeatures2d") and hasattr(cv2.xfeatures2d, "SURF_create")
-except AttributeError:
-    SURF_AVAILABLE = False
+def _surf_available():
+    try:
+        if not hasattr(cv2, "xfeatures2d"):
+            return False
+        cv2.xfeatures2d.SURF_create()
+        return True
+    except Exception:
+        return False
+
+SURF_AVAILABLE = _surf_available()
 
 # 1. FIXTURES
 

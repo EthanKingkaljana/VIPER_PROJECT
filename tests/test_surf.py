@@ -1,4 +1,3 @@
-# tests/test_surf.py
 import os
 import json
 import time
@@ -8,13 +7,23 @@ import cv2
 import numpy as np
 import pytest
 
-try:
-    surf_available = hasattr(cv2, 'xfeatures2d') and hasattr(cv2.xfeatures2d, 'SURF_create')
-except AttributeError:
-    surf_available = False
 
-if not surf_available:
-    pytest.skip("SURF not available (requires opencv-contrib-python)", allow_module_level=True)
+def surf_available():
+    try:
+        if not hasattr(cv2, "xfeatures2d"):
+            return False
+        cv2.xfeatures2d.SURF_create()
+        return True
+    except Exception:
+        return False
+
+
+if not surf_available():
+    pytest.skip(
+        "SURF not available (OpenCV built without NONFREE support)",
+        allow_module_level=True
+    )
+
 
 from server.algos.feature.surf_adapter import run as surf_run
 

@@ -9,8 +9,8 @@ from ..utils_io import resolve_image_path, OUT, RESULT_DIR, static_url
 
 
 
-from server.algos.segmentation.DeepLabv3 import run as deeplab_run
-from server.algos.segmentation.MaskRNN import run as maskrcnn_run
+from server.algos.segmentation.deeplab_adapter import run as deeplab_run
+from server.algos.segmentation.maskrcnn_adapter import run as maskrcnn_run
 
 router = APIRouter()
 

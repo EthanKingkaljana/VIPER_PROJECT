@@ -7,9 +7,9 @@ from pydantic import BaseModel
 
 from ..utils_io import resolve_image_path, OUT, RESULT_DIR, static_url
 
-from server.algos.enchancement.Clahe import run as clahe_run
-from server.algos.enchancement.Msrcr import run as msrcr_run
-from server.algos.enchancement.Zero import run as zero_run
+from server.algos.enchancement.clahe_adapter import run as clahe_run
+from server.algos.enchancement.msrcr_adapter import run as msrcr_run
+from server.algos.enchancement.zero_adapter import run as zero_run
 
 router = APIRouter()
 

@@ -7,9 +7,9 @@ from pydantic import BaseModel
 
 from ..utils_io import resolve_image_path, OUT, RESULT_DIR, static_url
 
-from server.algos.restoration.dncnn import run as dncnn_run
+from server.algos.restoration.dncnn_adapter import run as dncnn_run
 from server.algos.restoration.SwinIR import run as swinir_run
-from server.algos.restoration.real import run as real_run 
+from server.algos.restoration.real_adapter import run as real_run 
 
 router = APIRouter()
 
